@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WithTurtleAbroad</title>
+  <link rel="stylesheet" href="mainstyle.css">
+  <link rel="stylesheet" href="choosen.css">
+</head>
+
+<body onload="requestBookedTours();">
+
+<div class="menu">
+  <div>WithTurtleAbroad</div>
+  <button onclick="toggleMenu()" ><img src="img/menu_pink.png" class="call_menu"></button>
+  <button class="logout"><img src="img/logout.png"></button>
+</div>
+
+<div class="side-menu">
+  <div class="menu_punkt">INFO</div>
+  <a href="all_tour.html"><img src="img/tours_pink.png">Тури</a>
+  <a href="#"style="cursor: default;"></a>
+  <div class="menu_punkt">USER</div>
+  <a href="choosen.html"><img src="img/obrani_pink.png">Обрані тури</a>
+  <a href="#"><img src="img/user_pink.png">Персональні дані</a>
+  <p>Ви увійшли як <br>Имя пользователя</p>
+
+</div>
+
+<div class="overlay" onclick="toggleMenu()"></div>
+
+
+
+
+<div class="content">
+    <div class="tour-container">
+      <h2>Ваші тури</h2>
+
+</div>
+
+
+<script src="general_script.js"></script>
+<script src="connect_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <!-- Подключение библиотеки Chart.js для отображения графиков -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="mainstyle.css">
+     <link rel="stylesheet" href="statistic.css">
+</head>
+<body>
+
+<div class="menu">
+    <div>WithTurtleAbroad</div>
+    <button onclick="toggleMenu()" ><img src="img/menu_pink.png" class="call_menu"></button>
+    <button class="logout"><img src="img/logout.png"></button>
+</div>
+
+<div class="side-menu">
+    <div class="menu_punkt">INFO</div>
+    <a href="statistic.html"><img src="img/statistic_pink.png">Статистика</a>
+    <a href="#"style="cursor: default;"></a>
+    <div class="menu_punkt">EDITING</div>
+   <a href="admin_edit1.html"><img src="img/edit_pink.png">Редагувати тури</a>
+    <a href="admin.html"><img src="img/add_tour_pink.png">Додати тур</a>
+    <p>Ви увійшли як <br>Имя пользователя</p>
+
+</div>
+
+<div class="overlay" onclick="toggleMenu()"></div>
+<div class="content">
+    <h2>Statistics</h2>
+    <div>
+        <div class="first-row">
+   <canvas id="tourChart"></canvas>
+        </div>
+<div class="second-row">
+        <canvas id="monthChart"></canvas>
+        <canvas id="durationChart"></canvas>
+    </div>
+         </div>
+ </div>
+<script src="connect_script.js"></script>
+<script src="general_script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+.tour-container {
+
+ display: flex;
+    flex-direction: column;
+    margin-left:280px;
+    width: 70%; /* Гарантирует, что контейнер занимает всю ширину родителя */
+    height: 100%; /* При необходимости */
+
+}
+
+.tour-title {
+
+    color: #26356A;
+    font-size: 24px;
+}
+
+.tour-content {
+ display: flex;
+    justify-content: space-between; /* Разделяет пространство между детьми */
+    align-items: flex-start; /* Выравнивает детей по верхнему краю */
+    width: 100%; /* Заполняет ширину родителя */
+    margin-top: 10px;
+    margin-bottom: 5%;
+
+}
+
+.tour-image-container {
+    flex-basis: 20%;
+    margin-right: 10px;
+}
+
+.tour-image {
+    width:252px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+
+.tour-info {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #26356A;
+
+    margin-top: 10px;
+    text-align: center;
+
+
+}
+.tour-description{
+    color: #26356A;
+}
+
+.tour-description p {
+    padding: 7px;
+    margin-top: 2px;
+}
+.tour-pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #FFD9D9;
+
+}
+
+.tour-price, .tour-price-euro, .tour-duration {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px;
+}
+.tour-duration{
+    background-color: #FFD9D9;
+    color: #26356A;
+
+}
+/* Стили для адаптивности при необходимости */
+@media (max-width: 768px) {
+    .tour-content {
+        flex-direction: column;
+    }
+    .tour-image-container, .tour-description, .tour-info {
+        flex-basis: 100%;
+    }
+}

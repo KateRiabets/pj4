@@ -1,0 +1,79 @@
+.form-group {
+    margin-bottom: 10px; /* Отступы между полями формы */
+
+}
+
+label {
+    display: block; /* Лейблы будут над полями ввода */
+    margin-bottom: 5px; /* Отступ между лейблом и полем ввода */
+}
+
+.column button {
+    color: white; /* Белый цвет текста кнопок */
+    border: none; /* Убрать границы */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+button[type="submit"], #editTour,#deleteTour {
+
+    background: #26356A;
+    color: rgba(255, 217, 217, 0.55);
+    font-size: 30px;
+    padding: 10px 100px 10px 100px;
+    cursor: pointer;
+
+
+}
+.button_div{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+    gap:25px;
+}
+form button[type="submit"]:hover, #editTour:hover,#deleteTour:hover{
+    color: rgba(255, 217, 217, 1);
+}
+.column {
+    width: 25%; /* Устанавливаем ширину колонки в 50% */
+    float: left; /* Выравниваем колонки по левому краю */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+}
+input{
+    border: 1px solid #26356A;
+}
+/* Для улучшения оформления можно добавить отступы между колонками и элементами */
+.column input {
+    display: block; /* Делаем элементы блочными, чтобы они занимали всю ширину колонки */
+    margin-bottom: 10px; /* Отступ между элементами */
+    width: calc(100% - 20px); /* Учитываем отступы */
+    padding: 5px; /* Добавляем небольшие внутренние отступы */
+}
+.row {
+    display: flex;
+    width: 99%; /* Устанавливаем ширину поля ввода */
+}
+.row input{
+    flex: 1;
+    margin-right: 10px;
+    padding: 8px; /* Задаем внутренний отступ */
+    margin-bottom: 10px; /* Задаем отступ между полями ввода */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+}
+::placeholder {
+    color: #8E849F; /* Синий цвет для плейсхолдеров */
+}
+input[type="date"] {
+    color:  #8E849F; /* Синий цвет для текста даты */
+}
+#description, #tags{
+    border: 1px solid #26356A;
+    width: 98.5%; /* Поля ввода будут на всю ширину */
+    padding: 10px; /* Паддинг для полей ввода */
+    margin-bottom: 10px; /* Отступы между полями ввода */
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину поля */
+}
+.edit_wrapper{
+    margin-top: 3%;
+    margin-left:5%;
+margin-bottom: 3%;
+
+}

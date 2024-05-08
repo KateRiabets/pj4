@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+body, html, .menu, .side-menu, .content, h2, h3, label, input, textarea, button {
+    font-family: 'Nunito', sans-serif;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.menu, .side-menu {
+    background: #26356A; /* Измененный цвет */
+    color: #FFD9D9;
+}
+.menu {
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    padding: 0 20px;
+    display: flex;
+    box-sizing: border-box;
+    z-index: 5; /* Убедитесь, что меню всегда наверху */
+}
+.content {
+    width: 100%;
+    position: fixed;
+    top: 3%; /* Начало контента на 15% ниже */
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    height: 100%;
+    z-index: 1; /* Ниже overlay, чтобы можно было на него нажимать */
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 5%; /* Начинается сразу под меню */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Покрывает оставшуюся часть страницы */
+    z-index: 4; /* Выше контента, но ниже меню */
+    display: none;
+}
+.side-menu {
+    width: 250px;
+    height: 100%; /* Чтобы соответствовало оверлею */
+    position: fixed;
+    top: 5%; /* Начинается сразу под меню */
+    left: -250px; /* Изначальное положение вне экрана */
+    transition: left 0.5s; /* Анимация */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 6; /* Выше overlay */
+    margin-top: auto;
+}
+.side-menu a, .side-menu a img {
+    color: rgba(255, 217, 217, 0.55);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 2vh;
+    margin: 20px 0;
+}
+.side-menu a:hover, .side-menu a:hover img {
+    color: rgba(255, 217, 217, 1); /* Цвет шрифта без прозрачности при наведении */
+    opacity: 1; /* Для картинок, чтобы сделать их полностью непрозрачными */
+}
+.side-menu a:nth-of-type(2) {
+    margin-bottom: 50px; /* Добавляем больший отступ после второго элемента */
+}
+.side-menu a img {
+    margin-right: 10px;
+    opacity: 0.55; /* Прозрачность для картинок */
+}
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color:black ;
+
+}
+.call_menu {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    opacity: 0.55;
+    height: 17px;
+}
+
+.call_menu:hover{
+    opacity: 1;
+}
+.logout {
+    display: flex;
+    align-items: center;
+    margin-left: 83%;
+    opacity: 0.55;
+    height: 10px;
+}
+.logout img{
+    width: 100%;
+    height: auto;
+}
+.logout:hover{
+    opacity: 1;
+}
+.content {
+    padding: 20px;
+    background: #fff; /* Фон всей страницы */
+}
+h2, h3 {
+    color: #26356A; /* Темно-синий цвет заголовков */
+}
+.menu_punkt{
+    color: #FFD9D9;
+    opacity: 0.55;
+}
+.side-menu p{
+    background-color:rgba(142, 132, 159, 0.55);; /* Цвет фона */
+    color:  rgba(255, 217, 217, 0.4); /* Цвет текста */
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 96%;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+
+
+/*---------------------------*/

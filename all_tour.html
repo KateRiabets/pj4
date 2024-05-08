@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WithTurtleAbroad</title>
+  <link rel="stylesheet" href="mainstyle.css">
+  <link rel="stylesheet" href="tours.css">
+</head>
+</head>
+<body>
+
+<div class="menu">
+  <div>WithTurtleAbroad</div>
+  <button onclick="toggleMenu()" ><img src="img/menu_pink.png" class="call_menu"></button>
+  <button class="logout"><img src="img/logout.png"></button>
+</div>
+
+<div class="side-menu">
+  <div class="menu_punkt">INFO</div>
+  <a href="all_tour.html"><img src="img/tours_pink.png">Тури</a>
+  <a href="#"style="cursor: default;"></a>
+  <div class="menu_punkt">USER</div>
+  <a href="choosen.html" id="loadToursLink"><img src="img/obrani_pink.png">Обрані тури</a>
+  <a href="#"><img src="img/user_pink.png">Персональні дані</a>
+  <p>Вы вошли как <br>Имя пользователя</p>
+
+</div>
+
+<div class="overlay" onclick="toggleMenu()"></div>
+
+
+<div class="content">
+
+  <div class="search-filters">
+    <h2>Усі тури</h2>
+    <form id="search-form">
+      <!-- Первый ряд - Поисковая строка -->
+      <div class="form-row">
+        <input type="text" id="search-query" name="search-query" placeholder="Пошук" class="full-width">
+      </div>
+
+      <!-- Второй ряд - Цена, Дата, Сортировка -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="price-from">Ціна, грн:</label>
+          <div class="price-inputs">
+            <input type="number" id="price-from" name="price-from" placeholder="Від">
+            <input type="number" id="price-to" name="price-to" placeholder="До">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="date-start">Дата:</label>
+          <div class="date-inputs">
+            <input type="date" id="date-start" name="date-start">
+            <input type="date" id="date-end" name="date-end" placeholder="Кінець">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="sort-by">Сортувати за:</label>
+          <select id="sort-by" name="sort-by" class="sort-select">
+             <option value="price_asc">-----</option>
+            <option value="price_asc">Ціна: зростання</option>
+            <option value="price_desc">Ціна: зниження</option>
+            <option value="date_asc">Дата початку: зростання</option>
+            <option value="date_desc">Дата початку: зниження</option>
+            <option value="rating_asc">Рейтинг: зростання</option>
+            <option value="rating_desc">Рейтинг: зниження</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Третий ряд - Страны, Города, Кнопка поиска -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="country">Країна:</label>
+          <input type="text" id="country" name="country"class="country" list="countries-datalist">
+           <datalist id="countries-datalist" ></datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="city" class="city-label" >Місто:</label>
+          <input type="text" id="city" name="city" list="city-datalist" class="city">
+          <datalist id="city-datalist" ></datalist>
+        </div>
+
+        <div class="form-group">
+          <button type="button" class="search-button" onclick="submitSearchForm()">Пошук</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="tours-grid" id="tours-grid">
+
+  </div>
+
+</div>
+
+
+<script src="connect_script.js"></script>
+<script src="general_script.js"></script>
+<!--<script src="tours_script.js"></script>-->
+</body>
+</html>

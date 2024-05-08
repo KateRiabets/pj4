@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>authenticate</title>
+    <link rel="stylesheet" href="auth.css">
+
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="form-container" id="loginForm">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required><br><br>
+        <input type="password" id="loginPassword" placeholder="Password" required><br><br>
+        <button type="submit" onclick="login()">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="showRegisterForm()">Register</a></p>
+</div>
+
+<div class="form-container" id="registerForm">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Username" required><br><br>
+        <input type="password" id="registerPassword" placeholder="Password" required><br><br>
+        <input type="text" id="registerNickname" placeholder="Nickname" required><br><br>
+        <button type="submit" onclick="register()">Register</button>
+    </form>
+    <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+</div>
+
+
+<script src="connect_script.js"></script>
+</body>
+</html>

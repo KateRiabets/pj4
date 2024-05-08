@@ -1,0 +1,16 @@
+.first-row canvas,
+.second-row canvas {
+height: 100%;
+    max-height: 600px; /* Высота автоматически подстраивается под ширину */
+
+}
+
+.first-row {
+    margin-bottom: 20px; /* Добавить немного пространства между рядами */
+}
+.second-row{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-bottom: 5%;
+}
